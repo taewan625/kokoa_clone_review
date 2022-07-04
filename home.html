@@ -1,36 +1,28 @@
-<!-- html 형식 규칙 -->
-<!-- <!DOCTYPE html> -->
-<!-- <html lang="ko"> -->
-<!-- <html>
-<head></head>
-<body></body>
-</html> -->
-
-<!-- title : tab 창의 이름
-     meta : broser 검색창에서 title 밑에 부연설명으로 나온 것
-     charset : 영어말고 다른 언어 인식을 위해 필요 
-     lang : 사이트에서 사용하는 언어 알려줌
-     link - shortcut img : tab창 상단에 작은 이미지 파일
-    og:image : 카톡에서 사이트 공유할때 나타내는 이미지-->
 <!DOCTYPE html>
 <html lang="ko">
-  <!-- 사이트에서 사용하는 언어 말해줌 -->
   <head>
     <link
       rel="shortcut icon"
-      sizes="16x16 32x32 64x64"
       href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico"
     />
-    <!-- href는 element에서 shortcut을 찾아서 우클릭 후 페이지로 이동 -> 페이지 주소를 붙여넣으면 된다 -->
     <meta charset="utf-8" />
     <meta name="description" content="this is website" />
-    <!-- attribute = content 가 부연설명으로 나타남 -->
     <title>home - my first website</title>
-    <!-- tab 창의 이름 설정-->
   </head>
   <body>
-    <h1>hello</h1>
-    <a href="http://google.com" target="_blank">Go to google.com</a>
-    <img src="img/아무사진.png" />
+    <form>
+      <!-- 요약 : form이라는 tag는 구획을 나누는 것이 기본 기능이고 그 안에 tag들이 들어갈 수 있다. https://www.nextree.co.kr/p8428/-->
+      <input placeholder="Name" type="file" accept=".pdf" />
+      <!-- type이란 attribute는 지정된 값 -->
+      <input placeholder="Name" type="" />
+      <!-- 들어가는 tag 중  input이 있고 input의 attribute도 다양하다. 
+      attribute = "attrivalue" 에서 attrivalue에 text가 들어갈 수도 있고 지정된 값이 있거나 아무 값도 안필요 할 수 있으니 잘 확인 해야 함-->
+      <input placeholder="username" type="" />
+      <!-- placeholder이란 attribute는 원하는 text  -->
+      <input required placeholder="password" type="password" />
+      <!-- required는 값 필요없음 -->
+      <input type="submit" value="제출해라ㅋ" />
+      <!-- value는 원하는 text -->
+    </form>
   </body>
 </html>
