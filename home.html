@@ -1,6 +1,36 @@
-<!-- broswer뿐만 아니라 내가 가진 이미지 파일을 아용하여 이미지를 나타낼 수 있다. -->
+<!-- html 형식 규칙 -->
+<!-- <!DOCTYPE html> -->
+<!-- <html lang="ko"> -->
+<!-- <html>
+<head></head>
+<body></body>
+</html> -->
 
-<img src="01.png" />
-<!-- 위의 내용은 html 파일이랑 같은 위치에 있을 때 -->
-<img src="img/01.png" />
-<!-- img 폴더 안에 존재할 때 -->
+<!-- title : tab 창의 이름
+     meta : broser 검색창에서 title 밑에 부연설명으로 나온 것
+     charset : 영어말고 다른 언어 인식을 위해 필요 
+     lang : 사이트에서 사용하는 언어 알려줌
+     link - shortcut img : tab창 상단에 작은 이미지 파일
+    og:image : 카톡에서 사이트 공유할때 나타내는 이미지-->
+<!DOCTYPE html>
+<html lang="ko">
+  <!-- 사이트에서 사용하는 언어 말해줌 -->
+  <head>
+    <link
+      rel="shortcut icon"
+      sizes="16x16 32x32 64x64"
+      href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico"
+    />
+    <!-- href는 element에서 shortcut을 찾아서 우클릭 후 페이지로 이동 -> 페이지 주소를 붙여넣으면 된다 -->
+    <meta charset="utf-8" />
+    <meta name="description" content="this is website" />
+    <!-- attribute = content 가 부연설명으로 나타남 -->
+    <title>home - my first website</title>
+    <!-- tab 창의 이름 설정-->
+  </head>
+  <body>
+    <h1>hello</h1>
+    <a href="http://google.com" target="_blank">Go to google.com</a>
+    <img src="img/아무사진.png" />
+  </body>
+</html>
