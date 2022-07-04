@@ -11,13 +11,29 @@
   </head>
   <body>
     <form>
-      <label for="profile">profile photo</label>
-      <!-- label은 for attribute와 같은 값의 id를 가진 input이 있을 때 작동 profile photo 라는 text를 누르면 input이 작동 -->
-      <input id="profile" placeholder="Name" type="file" accept=".pdf" />
-      <input placeholder="Name" type="" />
-      <input placeholder="username" type="" />
-      <input required placeholder="password" type="password" />
-      <input type="submit" value="제출해라ㅋ" />
+      <header>abc</header>
+
+      <div>
+        <label for="profile">profile photo</label>
+        <!-- label은 for attribute와 같은 값의 id를 가진 input이 있을 때 작동 profile photo 라는 text를 누르면 input이 작동 -->
+      </div>
+
+      <main>
+        <div>
+          <input id="profile" placeholder="Name" type="file" accept=".pdf" />
+        </div>
+        <div><input placeholder="Name" type="" /></div>
+        <input placeholder="username" type="" />
+        <div></div>
+      </main>
+
+      <footer>
+        <input required placeholder="password" type="password" />
+        <input type="submit" value="제출해라ㅋ" />
+      </footer>
     </form>
   </body>
 </html>
+
+<!-- non sementic tag: div는 box라고 생각하면 된다. 
+          semetic tag: header, main, footer = 기능은 div와 같지만 바로 이해하기 쉽다-->
