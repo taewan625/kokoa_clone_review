@@ -11,18 +11,13 @@
   </head>
   <body>
     <form>
-      <!-- 요약 : form이라는 tag는 구획을 나누는 것이 기본 기능이고 그 안에 tag들이 들어갈 수 있다. https://www.nextree.co.kr/p8428/-->
-      <input placeholder="Name" type="file" accept=".pdf" />
-      <!-- type이란 attribute는 지정된 값 -->
+      <label for="profile">profile photo</label>
+      <!-- label은 for attribute와 같은 값의 id를 가진 input이 있을 때 작동 profile photo 라는 text를 누르면 input이 작동 -->
+      <input id="profile" placeholder="Name" type="file" accept=".pdf" />
       <input placeholder="Name" type="" />
-      <!-- 들어가는 tag 중  input이 있고 input의 attribute도 다양하다. 
-      attribute = "attrivalue" 에서 attrivalue에 text가 들어갈 수도 있고 지정된 값이 있거나 아무 값도 안필요 할 수 있으니 잘 확인 해야 함-->
       <input placeholder="username" type="" />
-      <!-- placeholder이란 attribute는 원하는 text  -->
       <input required placeholder="password" type="password" />
-      <!-- required는 값 필요없음 -->
       <input type="submit" value="제출해라ㅋ" />
-      <!-- value는 원하는 text -->
     </form>
   </body>
 </html>
