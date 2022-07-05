@@ -3,20 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <title>taewan website</title>
-    <link rel="stylesheet" href="style.css" />
     <style>
-      h1 {
-        color: blue;
-        text-decoration: underline dotted;
-        font-size: 50px;
+      div {
+        height: 150px;
+        width: 150px;
+        background-color: tomato;
+      }
+      span {
+        border-color: aquamarine;
       }
     </style>
-    <!-- css는 cascating 형식이여서 마지막의 것이 결국 적용 된다.
-      link tag를 style tag 아래로 내리면 black이 적용 된다. -->
   </head>
   <body>
-    <header>
-      <h1>taewan times</h1>
-    </header>
+    <!-- 모든 박스 형식=block은 기본적으로 옆으로 못간다. inline 형식과 block 형식 2가지로 있다.
+      inline : span, a, img inline 요소가 몇 안되서 기억하는게 좋다-->
+    <div></div>
+    <div></div>
+    <div></div>
+    <span>a</span><span>a</span><span>a</span>
   </body>
 </html>

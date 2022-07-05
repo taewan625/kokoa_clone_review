@@ -6,6 +6,5 @@ selector{
   property: ###; 
 } 
 */
-h1 {
-  color: black;
-}
+
+/* 브라우저의 모든 것은 다 박스로 구성된다 */
