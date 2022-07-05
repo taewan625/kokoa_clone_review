@@ -5,21 +5,22 @@
     <title>taewan website</title>
     <style>
       div {
+        display: inline;
         height: 150px;
         width: 150px;
         background-color: tomato;
       }
+      /* display inline 특성은 height와 width를 가질 수 없다 */
       span {
-        border-color: aquamarine;
+        display: block;
+        background-color: aqua;
       }
+      /* display: block을 통해서 span을 block 처리 할 수 있다 */
     </style>
   </head>
   <body>
-    <!-- 모든 박스 형식=block은 기본적으로 옆으로 못간다. inline 형식과 block 형식 2가지로 있다.
-      inline : span, a, img inline 요소가 몇 안되서 기억하는게 좋다-->
     <div></div>
-    <div></div>
-    <div></div>
-    <span>a</span><span>a</span><span>a</span>
+    <span>hello</span>
+    <span>hello</span>
   </body>
 </html>
