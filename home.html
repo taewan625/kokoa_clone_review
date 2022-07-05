@@ -4,16 +4,22 @@
     <meta charset="UTF-8" />
     <title>taewan website</title>
     <style>
+      * {
+        border: 1px solid black;
+      }
+      /* border 위에 마우스를 대고 syntax라고 나오면 그 안에 속성에 맞게 순서대로 값을 넣어주면 됨
+      line-width line style line color 이 순으로 */
       html {
         background-color: tomato;
       }
       body {
-        margin: 10px;
+        margin: 20px;
         padding: 20px;
         background-color: aqua;
       }
       div {
-        padding: 10px;
+        padding: 20px;
+        border: 1px solid;
       }
       #first {
         background-color: whitesmoke;
@@ -35,14 +41,15 @@
         width: 25px;
         height: 25px;
       }
+      span {
+        margin: 100px;
+      }
     </style>
   </head>
   <body>
     <div id="first">
       <div id="second">
-        <div id="third">
-          <div id="fourth"></div>
-        </div>
+        <div id="third"><span>hi</span></div>
       </div>
     </div>
   </body>
