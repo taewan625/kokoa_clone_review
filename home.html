@@ -8,23 +8,46 @@
         background-color: tomato;
       }
       body {
-        margin: 10px 20px 30px 40px;
+        margin: 10px;
+        padding: 20px;
         background-color: aqua;
       }
       div {
-        margin: 50px;
-        height: 150px;
-        width: 150px;
-        background-color: wheat;
+        padding: 10px;
       }
-      /* collapsing margins : box1과 box2의 border(경계)가 같을 때 발생 / 위 아래에서만 적용
-      box들의 border을 떨어트리려고 padding 개념 등장*/
+      #first {
+        background-color: whitesmoke;
+        width: 150px;
+        height: 150px;
+      }
+      #second {
+        background-color: teal;
+        width: 100px;
+        height: 100px;
+      }
+      #third {
+        background-color: wheat;
+        width: 50px;
+        height: 50px;
+      }
+      #fourth {
+        background-color: blanchedalmond;
+        width: 25px;
+        height: 25px;
+      }
     </style>
   </head>
   <body>
-    <div></div>
+    <div id="first">
+      <div id="second">
+        <div id="third">
+          <div id="fourth"></div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
-<!-- box 특성 : margin, border, padding 가짐
-margin: box의 border(경계)의 바깥에 있는 공간 
-+ default값으로 body는 border 바깥으로 8px 만큼의 margine을 가진다-->
+
+<!-- padding은 기본적으로 저장한 공간인 width와 height를 지키기 위해서 사이즈가 옆으로 더 커진다 
+     margin은 body나 바로 상위(parents box)가 height와 width가 정해져 있을 때 사이즈 변화 없이 이동하고
+     body의 size가 정해져 있지 않을때는 body가 사이즈가 커짐-->
