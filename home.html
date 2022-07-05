@@ -4,23 +4,27 @@
     <meta charset="UTF-8" />
     <title>taewan website</title>
     <style>
-      div {
-        display: inline;
-        height: 150px;
-        width: 150px;
+      html {
         background-color: tomato;
       }
-      /* display inline 특성은 height와 width를 가질 수 없다 */
-      span {
-        display: block;
+      body {
+        margin: 10px 20px 30px 40px;
         background-color: aqua;
       }
-      /* display: block을 통해서 span을 block 처리 할 수 있다 */
+      div {
+        margin: 50px;
+        height: 150px;
+        width: 150px;
+        background-color: wheat;
+      }
+      /* collapsing margins : box1과 box2의 border(경계)가 같을 때 발생 / 위 아래에서만 적용
+      box들의 border을 떨어트리려고 padding 개념 등장*/
     </style>
   </head>
   <body>
     <div></div>
-    <span>hello</span>
-    <span>hello</span>
   </body>
 </html>
+<!-- box 특성 : margin, border, padding 가짐
+margin: box의 border(경계)의 바깥에 있는 공간 
++ default값으로 body는 border 바깥으로 8px 만큼의 margine을 가진다-->
