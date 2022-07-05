@@ -1,0 +1,8 @@
+/* 1. selector를 지정한다
+2. {property=속성}값을 넣어 꾸민다
+3. property를 사용할 때 : ### ; 이렇게 콜롬과 세미콜론으로 마무리해야함
+4. property-doesnt-have-space / 속성값은 띄워쓰기가 없다
+selector{
+  property: ###; 
+} 
+*/
