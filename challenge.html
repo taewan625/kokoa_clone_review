@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>repl.it</title>
+    <style>
+      *{
+        font-family: 'Times New Roman', Times, serif;
+        font-weight:bolder;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p><h1>Create An Account</h1></p>
+    <form>
+      <div>
+        <label for="a">First name </label>
+        <input id="a" type="text" placeholder="First name" required />
+      </div>
+      <div><label for="b">Last name </label><input id="b" type="text" placeholder="Last name" required /></div>
+      <div><label for="c">Email </label><input id="c" type="email" placeholder="Email" required /></div>
+      <div><label for="d">Username </label><input id="d" type="text" placeholder="Username" required /></div>
+      <div>
+        <label for="e">Password </label>
+        <input id="e" type="password" minlength="10" placeholder="password" required />
+      </div>
+      <div><label for="f">Birth date </label><input id="f" type="date" required /></div>
+      <div>
+        <label for="g">How happy are you? </label>
+        <input id="g" type="range" list="tickmarks" required />
+        <datalist id="tickmarks">
+          <option value="0"></option>
+          <option value="10"></option>
+          <option value="20"></option>
+          <option value="30"></option>
+          <option value="40"></option>
+          <option value="50"></option>
+          <option value="60"></option>
+          <option value="70"></option>
+          <option value="80"></option>
+          <option value="90"></option>
+          <option value="100"></option>
+        </datalist>
+      </div>
+      <div>
+        <label for="h">What is your fav.color? </label><input id="h" type="color" required />
+      </div>
+      <input type="submit" />
+    </form>
+  </body>
+</html>
