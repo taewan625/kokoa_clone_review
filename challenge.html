@@ -3,34 +3,51 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>repl.it</title>
-    <style>
-      *{
-        font-family: 'Times New Roman', Times, serif;
-        font-weight:bolder;
-      }
-    </style>
+    <title>SuperForm</title>
   </head>
-
   <body>
-    <p><h1>Create An Account</h1></p>
+    <h2>Create An Account</h2>
     <form>
       <div>
-        <label for="a">First name </label>
-        <input id="a" type="text" placeholder="First name" required />
+        <label for="first-name">First name</label>
+        <input required id="first-name" type="text" placeholder="First name" />
       </div>
-      <div><label for="b">Last name </label><input id="b" type="text" placeholder="Last name" required /></div>
-      <div><label for="c">Email </label><input id="c" type="email" placeholder="Email" required /></div>
-      <div><label for="d">Username </label><input id="d" type="text" placeholder="Username" required /></div>
       <div>
-        <label for="e">Password </label>
-        <input id="e" type="password" minlength="10" placeholder="password" required />
+        <label for="last-name">Last name</label>
+        <input required id="last-name" type="text" placeholder="Last name" />
       </div>
-      <div><label for="f">Birth date </label><input id="f" type="date" required /></div>
       <div>
-        <label for="g">How happy are you? </label>
-        <input id="g" type="range" list="tickmarks" required />
-        <datalist id="tickmarks">
+        <label for="email">Email</label>
+        <input required id="email" type="email" placeholder="Email" />
+      </div>
+      <div>
+        <label for="username">Username</label>
+        <input
+          required
+          id="username"
+          type="text"
+          minlength="5"
+          placeholder="Username"
+        />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input
+          required
+          id="password"
+          type="password"
+          minlength="10"
+          placeholder="Password"
+        />
+      </div>
+      <div>
+        <label for="birth-date">Birth date</label>
+        <input required id="birth-date" type="date" />
+      </div>
+      <div>
+        <label for="kimchi-love">How happy are you?</label>
+        <input required id="kimchi-love" type="range" list="kimchi-levels" />
+        <datalist id="kimchi-levels">
           <option value="0"></option>
           <option value="10"></option>
           <option value="20"></option>
@@ -45,9 +62,12 @@
         </datalist>
       </div>
       <div>
-        <label for="h">What is your fav.color? </label><input id="h" type="color" required />
+        <label for="fa-color">What is your fav. color?</label>
+        <input required id="fa-color" type="color" />
       </div>
-      <input type="submit" />
+      <div>
+        <input type="submit" value="Create Account" />
+      </div>
     </form>
   </body>
 </html>
