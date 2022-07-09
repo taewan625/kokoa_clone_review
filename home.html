@@ -4,54 +4,31 @@
     <meta charset="UTF-8" />
     <title>taewan website</title>
     <style>
-      * {
-        border: 1px solid black;
-      }
-      /* border 위에 마우스를 대고 syntax라고 나오면 그 안에 속성에 맞게 순서대로 값을 넣어주면 됨
-      line-width line style line color 이 순으로 */
-      html {
-        background-color: tomato;
-      }
       body {
-        margin: 20px;
-        padding: 20px;
-        background-color: aqua;
-      }
-      div {
-        padding: 20px;
-        border: 1px solid;
-      }
-      #first {
-        background-color: whitesmoke;
-        width: 150px;
-        height: 150px;
-      }
-      #second {
-        background-color: teal;
-        width: 100px;
-        height: 100px;
-      }
-      #third {
-        background-color: wheat;
-        width: 50px;
-        height: 50px;
-      }
-      #fourth {
-        background-color: blanchedalmond;
-        width: 25px;
-        height: 25px;
+        margin: 20;
       }
       span {
-        margin: 100px;
+        background-color: teal;
+        /* padding: 20px;
+        margin: 30px; */
+        /* inline은 높이와 너비가 존재하지 않아서 margin 위아래가 적용되지 않는다
+        그래서 위아래 margin 적용하려면 block 처리해야한다*/
+      }
+      .tomato {
+        background-color: tomato;
+        color: white;
+        padding: 5px;
       }
     </style>
   </head>
   <body>
-    <div id="first">
-      <div id="second">
-        <div id="third"><span>hi</span></div>
-      </div>
-    </div>
+    <span>hello</span>
+    <span class="tomato">hello</span>
+    <span>hello</span>
+    <span class="tomato">hello</span>
+    <span>hello</span>
+    <span class="tomato">hello</span>
+    <span>hello</span>
   </body>
 </html>
 
