@@ -7,24 +7,26 @@
       body {
         height: 100vh;
         display: flex;
+        /*flex-direction: column; /*main, cross 뒤집어 놓음*/
         justify-content/*main axis*/: space-evenly;
         align-items/*cross axis*/: center;
+        flex-wrap: wrap; /* browser 줄일 때 box size 유지하는 것*/
+        flex-direction: column;
       }
       div {
-        /* display: inline-block; inline 형식의 block -suck way */
-        width: 50px;
-        height: 50px;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 500px;
         background-color: teal;
       }
     </style>
   </head>
   <body>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
   </body>
 </html>
-
-<!-- padding은 기본적으로 저장한 공간인 width와 height를 지키기 위해서 사이즈가 옆으로 더 커진다 
-     margin은 body나 바로 상위(parents box)가 height와 width가 정해져 있을 때 사이즈 변화 없이 이동하고
-     body의 size가 정해져 있지 않을때는 body가 사이즈가 커짐-->
