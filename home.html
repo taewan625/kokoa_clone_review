@@ -22,8 +22,12 @@
       }
 
       p + span {
-        /* p랑 같은 세대의 span을 지정하는 것인데 p+span 순서여서 위치상 아래의 span만 영향 받음 */
+        /* p랑 같은 세대의 바로옆에서만 span을 지정하는 것인데 p+span 순서여서 위치상 아래의 span만 영향 받음 */
         color: aliceblue;
+      }
+      p ~ span {
+        /* p랑 같은 세대의 바로 옆인 아닌 위치상 아래의 것 */
+        color: blueviolet;
       }
     </style>
   </head>
@@ -31,6 +35,8 @@
     <div>
       <span>hello</span>
       <p>abcdefg <span>abc</span></p>
+      <span>bye2</span>
+      <p>middle</p>
       <span>bye</span>
     </div>
   </body>
