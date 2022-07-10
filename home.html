@@ -5,28 +5,29 @@
     <title>taewan website</title>
     <style>
       body {
-        height: 100vh;
-        display: flex;
-        /*flex-direction: column; /*main, cross 뒤집어 놓음*/
-        justify-content/*main axis*/: space-evenly;
-        align-items/*cross axis*/: center;
-        flex-wrap: wrap; /* browser 줄일 때 box size 유지하는 것*/
-        flex-direction: column;
+        height: 1000vh;
+        margin: 20px;
       }
       div {
-        margin: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 500px;
-        height: 500px;
+        /* position: fixed; 스크롤 내릴때 고정되서 같이 내려오는 것 */
+        width: 300px;
+        height: 300px;
+        color: white;
         background-color: teal;
+      }
+      #one {
+        position: fixed;
+      }
+      #two {
+        bottom: 50px;
+        position: fixed;
+        background-color: wheat;
+        width: 350px;
       }
     </style>
   </head>
   <body>
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
+    <div id="one"></div>
+    <div id="two"></div>
   </body>
 </html>
