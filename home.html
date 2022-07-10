@@ -5,29 +5,30 @@
     <title>taewan website</title>
     <style>
       body {
-        height: 1000vh;
+        height: 100vh;
         margin: 20px;
       }
       div {
-        /* position: fixed; 스크롤 내릴때 고정되서 같이 내려오는 것 */
         width: 300px;
         height: 300px;
         color: white;
-        background-color: teal;
-      }
-      #one {
-        position: fixed;
-      }
-      #two {
-        bottom: 50px;
-        position: fixed;
         background-color: wheat;
-        width: 350px;
+        position: relative;
+        /*position absoult의 parents 보여줄려고 넣음  얘가 없을때는 relative한게 body이므로 body기준으로 움직임*/
+      }
+      .green {
+        background-color: teal;
+        height: 100px;
+        width: 100px;
+        position: relative; /*div가 처음 존재한 곳을 기준점으로 조금씩 이동할 때 사용 */
+        position: absolute; /* position relative가 존재하는 parents를 기준으로 이동*/
+        bottom: 5px;
       }
     </style>
   </head>
   <body>
-    <div id="one"></div>
-    <div id="two"></div>
+    <div id="one">
+      <div class="green"></div>
+    </div>
   </body>
 </html>
