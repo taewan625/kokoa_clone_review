@@ -9,26 +9,46 @@
         margin: 20px;
       }
       div {
-        width: 300px;
-        height: 300px;
-        color: white;
-        background-color: wheat;
-        position: relative;
-        /*position absoult의 parents 보여줄려고 넣음  얘가 없을때는 relative한게 body이므로 body기준으로 움직임*/
-      }
-      .green {
-        background-color: teal;
-        height: 100px;
         width: 100px;
-        position: relative; /*div가 처음 존재한 곳을 기준점으로 조금씩 이동할 때 사용 */
-        position: absolute; /* position relative가 존재하는 parents를 기준으로 이동*/
-        bottom: 5px;
+        height: 100px;
+        background-color: wheat;
+      }
+      div:first-child {
+        background-color: blue;
+      }
+      div:nth-child(6) {
+        background-color: green;
+      }
+      span {
+        background-color: tomato;
+      }
+      span:last-child {
+        background-color: teal;
+      }
+      span:nth-child(even) {
+        /* = 2n+1 */
+        background-color: aqua;
       }
     </style>
   </head>
   <body>
-    <div id="one">
-      <div class="green"></div>
-    </div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+
+    <span>6</span>
+    <span>7</span>
+    <span>8</span>
+    <span>9</span>
+    <span>10</span>
+    <span>11</span>
+    <span>12</span>
   </body>
 </html>
+<!-- #### 아주 중요 #### -->
+<!-- pseudo first-child 랑 last-child는 tag 내용이 달라도 tag 전체를 한 묶음으로 보고 처음과 끝을 인식한다.
+그래서 div last-child는 존재자체를 하지 않는다. last-child는 span에만 존재하게됨 
+마찬가지로 nth-child도 div랑 span 전체 개수 기준으로 하게되서 span nth-child(2)는 존재 X
+span nth-child(6)은 존재 span nth-chlid(even)도 div부터시작해서 짝수를 찾는거라서 6번 8번이 색이 바뀜-->
