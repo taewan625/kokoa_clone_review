@@ -8,36 +8,27 @@
         height: 100vh;
         margin: 20px;
       }
-      span {
+
+      input:required {
+        border: 1px solid blue;
+      }
+      input[type="password"] {
         background-color: tomato;
       }
-
-      div p span /*parents(없어도됨) parents chlidren*/ {
-        color: teal;
-      }
-
-      div > span {
-        /* > : div 바로 밑에 span에만 적용 */
-        text-decoration: underline;
-      }
-
-      p + span {
-        /* p랑 같은 세대의 바로옆에서만 span을 지정하는 것인데 p+span 순서여서 위치상 아래의 span만 영향 받음 */
-        color: aliceblue;
-      }
-      p ~ span {
-        /* p랑 같은 세대의 바로 옆인 아닌 위치상 아래의 것 */
-        color: blueviolet;
+      /* ####아주중요####  something~="word" ; word를 포함하는 모든 것(=~)을 의미 
+      이런 것들을 attribute selector 라고 하고 attribute selector mdn에서 추가로 확인 가능*/
+      input[placeholder~="name"] {
+        background-color: aqua;
       }
     </style>
   </head>
   <body>
     <div>
-      <span>hello</span>
-      <p>abcdefg <span>abc</span></p>
-      <span>bye2</span>
-      <p>middle</p>
-      <span>bye</span>
+      <form action="">
+        <input type="text" placeholder="first name" />
+        <input type="text" placeholder="last name" />
+        <input type="password" placeholder="password" required />
+      </form>
     </div>
   </body>
 </html>
