@@ -6,34 +6,38 @@
     <style>
       body {
         height: 100vh;
-        margin: 20px;
       }
-
-      input:required {
-        border: 1px solid blue;
+      form {
+        border: 1px solid tomato;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
       }
-      input[type="password"] {
-        background-color: tomato;
+      form:focus-within {
+        /* focus한 것의 부모에게 영향을 주는 것 그래서 within이란 의미를 사용 */
+        border-color: green;
       }
-      /* ####아주중요####  something~="word" ; word를 포함하는 모든 것(=~)을 의미 
-      이런 것들을 attribute selector 라고 하고 attribute selector mdn에서 추가로 확인 가능*/
-      input[placeholder~="name"] {
-        background-color: aqua;
+      form:hover span {
+        /* form 안에 꺼에 어떤 state(여기선 hover)를 나타낼 때 
+        다른 tag인 input에게 영향을 주는 것 
+        *영향을 주는 tag는 form 안에 존재하는 것에 한함*/
+        background-color: blue;
+      }
+      form:hover input:focus {
+        /* 확장버전으로 form에 hover 상태이면서 input에 focus 될 때 
+        input의 style 변경 */
+        background-color: red;
       }
     </style>
   </head>
   <body>
-    <div>
-      <form action="">
-        <input type="text" placeholder="first name" />
-        <input type="text" placeholder="last name" />
-        <input type="password" placeholder="password" required />
-      </form>
-    </div>
+    <form>
+      <input type="text" />
+      <input type="text" />
+      <input type="text" />
+      <span>abc</span>
+    </form>
   </body>
 </html>
-<!-- #### 아주 중요 #### -->
-<!-- pseudo first-child 랑 last-child는 tag 내용이 달라도 tag 전체를 한 묶음으로 보고 처음과 끝을 인식한다.
-그래서 div last-child는 존재자체를 하지 않는다. last-child는 span에만 존재하게됨 
-마찬가지로 nth-child도 div랑 span 전체 개수 기준으로 하게되서 span nth-child(2)는 존재 X
-span nth-child(6)은 존재 span nth-chlid(even)도 div부터시작해서 짝수를 찾는거라서 6번 8번이 색이 바뀜-->
+
+<!-- style hov에서 states관련 요소 확인할 수 있다 -->
