@@ -8,43 +8,31 @@
         height: 100vh;
         margin: 20px;
       }
-      div {
-        width: 100px;
-        height: 100px;
-        background-color: wheat;
-      }
-      div:first-child {
-        background-color: blue;
-      }
-      div:nth-child(6) {
-        background-color: green;
-      }
       span {
         background-color: tomato;
       }
-      span:last-child {
-        background-color: teal;
+
+      div p span /*parents(없어도됨) parents chlidren*/ {
+        color: teal;
       }
-      span:nth-child(even) {
-        /* = 2n+1 */
-        background-color: aqua;
+
+      div > span {
+        /* > : div 바로 밑에 span에만 적용 */
+        text-decoration: underline;
+      }
+
+      p + span {
+        /* p랑 같은 세대의 span을 지정하는 것인데 p+span 순서여서 위치상 아래의 span만 영향 받음 */
+        color: aliceblue;
       }
     </style>
   </head>
   <body>
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-
-    <span>6</span>
-    <span>7</span>
-    <span>8</span>
-    <span>9</span>
-    <span>10</span>
-    <span>11</span>
-    <span>12</span>
+    <div>
+      <span>hello</span>
+      <p>abcdefg <span>abc</span></p>
+      <span>bye</span>
+    </div>
   </body>
 </html>
 <!-- #### 아주 중요 #### -->
