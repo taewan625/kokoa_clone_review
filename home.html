@@ -4,28 +4,28 @@
     <meta charset="UTF-8" />
     <title>taewan website</title>
     <style>
-      @keyframes AnimationFunctionName {
-        0% {
-          transform: translate(0);
-        }
-        50% {
-          transform: translate(100px);
-          border-color: red;
-        }
-        100% {
-          transform: translate(0px);
-        }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
-      img {
-        border: solid 5px;
-        border-radius: 50%;
-        animation: AnimationFunctionName 5s ease-in-out infinite;
+      div {
+        background-color: teal;
+        width: 200px;
+        height: 200px;
       }
+      @media screen and (min-width: 650px) and (max-width: 750px) {
+        div {
+          background-color: tomato;
+        }
+      }
+      /* 핸드폰 모드 가로: and (orientation: landscape) 
+      / 세로: and (orientation: portrait) 도 적용가능*/
     </style>
   </head>
   <body>
-    <img src="img/아무사진.png" alt="아무사진" />
-    Animation Sample Site ( https://animista.net/ )
+    <div></div>
   </body>
 </html>
