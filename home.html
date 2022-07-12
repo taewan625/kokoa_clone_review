@@ -5,11 +5,15 @@
     <title>taewan website</title>
     <style>
       @keyframes AnimationFunctionName {
-        from {
-          transform: rotatY(0);
+        0% {
+          transform: translate(0);
         }
-        to {
-          transform: rotateY(360deg);
+        50% {
+          transform: translate(100px);
+          border-color: red;
+        }
+        100% {
+          transform: translate(0px);
         }
       }
 
@@ -22,5 +26,6 @@
   </head>
   <body>
     <img src="img/아무사진.png" alt="아무사진" />
+    Animation Sample Site ( https://animista.net/ )
   </body>
 </html>
