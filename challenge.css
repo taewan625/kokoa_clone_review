@@ -1,56 +1,64 @@
 body {
   height: 100vh;
-  background-color: bisque;
+  background-color: whitesmoke;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-div:first-child {
+
+h1 {
+  margin-bottom: 50px;
+}
+/* section과 .color = article tag는 block이 아니므로 원래 width가 존재하지 않는다.
+그래서 %를 이용하여 width를 만들었다 
+그럼 왜 .color에 box를 설정하는 display: block이 없냐? .color의 parents인 sectiton에서 display block을 설정해주었기 때문 
+section의 box 처리는 body가 해주었다!!*/
+section {
+  width: 50%;
+  /* width 50% 없게되면 .color width에서 빈칸없이 width 48%로만 맞추기 때문에
+  여유공간을 위해 넣어줌 이래야 space-between 사용 가능 */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.color {
+  width: 48%;
+  /* width를 넣어주므로써 2x2로 나타낼수 있었던 것 */
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.color:first-child .color__bg {
   background-color: tomato;
 }
-div:nth-child(2) {
+
+.color:nth-child(2) .color__bg {
   background-color: teal;
 }
-div:nth-child(3) {
+
+.color:nth-child(3) .color__bg {
   background-color: burlywood;
 }
-div:last-child {
+
+.color:last-child .color__bg {
   background-color: thistle;
 }
 
-#outline {
-  height: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  background-color: bisque;
+.color__bg {
+  height: 300px;
+  border: 5px solid white;
 }
 
-div > * {
-  height: 200px;
-  width: 150px;
-  border: 6px solid white;
-}
-
-div > div {
-  right: 3px;
-  font-weight: 600;
-  position: relative;
-}
-div > p {
-  height: 80px;
-  width: 138.5px;
+.color__info {
+  position: absolute;
+  /* div를 따로 만들어서 absolute를 이용해서
+  가장 근처의 postion: relative를 가진 parents를 기준으로 맞춤 */
+  width: 100%;
   background-color: white;
-}
-
-p > span {
-  position: relative;
-  left: 10px;
-  top: 15px;
-}
-p + span {
-  font-size: small;
-  position: relative;
-  top: -50px;
-  left: 10px;
+  top: 20px;
+  padding: 0px 10px;
+  box-sizing: border-box;
+  /* border가 box안으로 제한됨 */
 }
