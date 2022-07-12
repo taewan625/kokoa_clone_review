@@ -4,12 +4,19 @@
     <meta charset="UTF-8" />
     <title>taewan website</title>
     <style>
+      @keyframes AnimationFunctionName {
+        from {
+          transform: rotatY(0);
+        }
+        to {
+          transform: rotateY(360deg);
+        }
+      }
+
       img {
         border: solid 5px;
         border-radius: 50%;
-        transform: translateX(300px);
-        /* 중요개념: translate는 3D 개념이라서 margin과 padding과 관련 없다 
-        그래서 element를 보면 원위치에 자리하게 된다*/
+        animation: AnimationFunctionName 5s ease-in-out infinite;
       }
     </style>
   </head>
