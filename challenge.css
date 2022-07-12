@@ -1,64 +1,76 @@
 body {
   height: 100vh;
-  background-color: whitesmoke;
+  background-color: aquamarine;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-
-h1 {
+@keyframes cycle {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.cycle {
+  width: 20%;
   margin-bottom: 50px;
-}
-/* section과 .color = article tag는 block이 아니므로 원래 width가 존재하지 않는다.
-그래서 %를 이용하여 width를 만들었다 
-그럼 왜 .color에 box를 설정하는 display: block이 없냐? .color의 parents인 sectiton에서 display block을 설정해주었기 때문 
-section의 box 처리는 body가 해주었다!!*/
-section {
-  width: 50%;
-  /* width 50% 없게되면 .color width에서 빈칸없이 width 48%로만 맞추기 때문에
-  여유공간을 위해 넣어줌 이래야 space-between 사용 가능 */
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  animation: cycle 3s ease-in-out infinite;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: aliceblue;
 }
 
-.color {
-  width: 48%;
-  /* width를 넣어주므로써 2x2로 나타낼수 있었던 것 */
-  position: relative;
-  margin-bottom: 20px;
+.wave {
+  width: 20%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.color:first-child .color__bg {
-  background-color: tomato;
+@keyframes waveDelay {
+  0% {
+    transform: scaleY(1);
+  }
+  25% {
+    transform: scaleY(2.5);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }
 
-.color:nth-child(2) .color__bg {
-  background-color: teal;
+.stick {
+  width: 10px;
+  height: 40px;
+  background-color: aliceblue;
+  animation: waveDelay 1.5s ease-in-out infinite;
 }
-
-.color:nth-child(3) .color__bg {
-  background-color: burlywood;
+.a {
+  animation-delay: 0s;
 }
-
-.color:last-child .color__bg {
-  background-color: thistle;
+.b {
+  animation-delay: 0.1s;
 }
-
-.color__bg {
-  height: 300px;
-  border: 5px solid white;
+.c {
+  animation-delay: 0.2s;
 }
-
-.color__info {
-  position: absolute;
-  /* div를 따로 만들어서 absolute를 이용해서
-  가장 근처의 postion: relative를 가진 parents를 기준으로 맞춤 */
-  width: 100%;
-  background-color: white;
-  top: 20px;
-  padding: 0px 10px;
-  box-sizing: border-box;
-  /* border가 box안으로 제한됨 */
+.d {
+  animation-delay: 0.3s;
+}
+.e {
+  animation-delay: 0.4s;
 }
