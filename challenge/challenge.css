@@ -1,79 +1,127 @@
+* {
+  box-sizing: border-box;
+}
 body {
-  height: 100vh;
-  background-color: aquamarine;
+  border: 5px solid aquamarine;
+}
+.status-bar {
+  margin-top: 30px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
+}
+.status-bar__column {
+  width: 33%;
+}
+.status-bar__column:first-child {
+  display: flex;
   justify-content: center;
-  flex-direction: column;
 }
-@keyframes cycle {
-  0% {
-    transform: rotate(0);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.cycle {
-  width: 20%;
-  margin-bottom: 50px;
+.status-bar__column:nth-child(2) {
   display: flex;
-  justify-content: space-between;
-  animation: cycle 3s ease-in-out infinite;
+  justify-content: center;
 }
-.dot {
-  width: 10px;
-  height: 10px;
+
+.current-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.current-player__figure {
+  margin-right: 15px;
+  height: 150px;
+  width: 150px;
+  background-color: #ffbd11;
+  border: 2px solid;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.play-button {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+}
+
+.play-button__play {
+  height: 70px;
+  width: 170px;
+  border: 2px solid black;
+  border-radius: 10px;
+  /* box-shadow: 0 3px 0 0; */
+  border-width: 1px 1px 5px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+}
+.fa-caret-right {
+  margin-right: 10px;
+}
+.play-button__like {
+  height: 70px;
+  width: 70px;
+  border: 2px solid;
   border-radius: 50%;
-  background-color: aliceblue;
-}
-
-.wave {
-  width: 20%;
-  margin-top: 50px;
+  border-width: 1px 1px 5px 1px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+}
+.play-button__plus {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 2px solid;
+  border-width: 1px 1px 5px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes waveDelay {
-  0% {
-    transform: scaleY(1);
-  }
-  25% {
-    transform: scaleY(2.5);
-  }
-  50% {
-    transform: scaleY(1);
-  }
-  100% {
-    transform: scaleY(1);
-  }
-  /* 일정부분을 기본값으로 안만들어주면 개판난다 */
+.tomato {
+  background-color: tomato;
+}
+.pink {
+  background-color: palevioletred;
+}
+.blue {
+  background-color: blue;
+}
+.teal {
+  background-color: teal;
 }
 
-.stick {
-  width: 10px;
-  height: 40px;
-  background-color: aliceblue;
-  animation: waveDelay 1.5s ease-in-out infinite;
-  /* animation은 여기서 동시에 진행이 되는 것이고 a,b,c 에서 delay만 시켜주는 것이므로 
-  끝에가 끝날때까지 기다리는 것처럼 보인다 */
+.next-list_one {
+  display: flex;
+  position: relative;
 }
-.a {
-  animation-delay: 0s;
+.next-list_two {
+  display: flex;
+
+  position: relative;
 }
-.b {
-  animation-delay: 0.1s;
+.next-list_three {
+  display: flex;
+  position: relative;
 }
-.c {
-  animation-delay: 0.2s;
+.next-list_four {
+  display: flex;
+  position: relative;
 }
-.d {
-  animation-delay: 0.3s;
+
+.next-list_figure {
+  height: 70px;
+  width: 70px;
+  border: 2px solid;
+  border-radius: 10px;
+  margin: 0 10px 40px 0;
+  /* background-color: tomato; */
 }
-.e {
-  animation-delay: 0.4s;
+.next-list_title {
+  position: relative;
+  bottom: 15px;
+  line-height: 0.7;
 }
