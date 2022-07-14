@@ -1,27 +1,17 @@
+/* default value */
+@import "reset.css";
+@import "variable.css";
+
+/* API */
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&family=Edu+SA+Beginner&display=swap");
+
+/* components */
+@import "components/status-bar.css";
+
+/* screens */
+@import "screens/login.css";
+
+/* Tip: style.css file에는 font-family와 같이 모든 화면에서 공통적으로 사용하는 것을 모아둠 */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  height: 200vh;
-}
-.status-bar {
-  display: flex;
-  justify-content: center;
-}
-.status-bar__column {
-  width: 33%;
-}
-.status-bar__column:first-child span {
-  margin-right: 5px;
-}
-.status-bar__column:nth-child(2) {
-  display: flex;
-  justify-content: center;
-}
-.status-bar__column:last-child {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.status-bar__column:last-child .fa-battery-full {
-  margin: 0 5px 0 5px;
+  font-family: "Edu SA Beginner", cursive;
 }

@@ -1,0 +1,53 @@
+.welcome-header {
+  margin: 90px 0px;
+  text-align: center;
+}
+.welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+.welcome-header__text {
+  line-height: 140%;
+  opacity: 0.7;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+#login-form input {
+  padding: 15px 0px;
+  font-size: 16px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+/* input type이 submit이 아닐 때 밑에 style 적용한다라는 뜻 */
+#login-form input:not([type="submit"]) {
+  /* ####중요####[] ; attribute selector*/
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease-in-out;
+}
+
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+#login-form input:focus {
+  border-color: var(--yellow);
+}
+#login-form input[type="submit"] {
+  border-radius: 10px;
+  transition: background-color 1s ease-in-out;
+  margin: 20px 0px 30px 0px;
+}
+#login-form input[type="submit"]:hover {
+  background-color: var(--yellow);
+  cursor: pointer;
+}
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: var(--yellow);
+  /* color: inherit ; = default black */
+}
