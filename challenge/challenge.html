@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>repl.it</title>
+    <title>You Are Awesome!</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
@@ -14,54 +14,124 @@
     />
     <link rel="stylesheet" href="challenge.css" />
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <i class="fas fa-times"></i>
-        <h1>Playlist</h1>
-      </header>
-      <main>
-        <section class="main-song">
-          <div class="main-song__cover">
-            <i class="far fa-image fa-3x"></i>
+    <header>
+      <div class="status-bar">
+        <div class="status-bar__column">
+          <i class="fas fa-bars fa-lg"></i>
+        </div>
+        <div class="status-bar__column">library</div>
+        <div class="status-bar__column">
+          <i class="fas fa-shopping-bag fa-lg"></i>
+        </div>
+      </div>
+    </header>
+
+    <form>
+      <input type="text" placeholder="Search books...." />
+      <i class="fas fa-search"></i>
+    </form>
+
+    <main>
+      <h1>Book of the day</h1>
+      <div class="today-book">
+        <div class="today-book__figure">
+          <img src="../img/아무사진.png" width="100px" height="140px" />
+        </div>
+        <div class="today-book__title">
+          <div class="today-book__title__text">
+            <h2 class="today-book__title__text__title-edit">A hagi shiltha</h2>
+            <h4 class="today-book__title__text__edit">Journey Through</h4>
+            <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i
+            ><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i
+            ><i class="far fa-star fa-xs"></i>
           </div>
-          <div class="main-song__data">
-            <h3 class="main-song__title">We Love 김치!</h3>
-            <h5 class="main-song__author">By Lynn</h5>
+          <div class="today-book__title__text__type">
+            <div class="today-book__title__text__type__box">Journey</div>
+            <div class="today-book__title__text__type__box">Biography</div>
           </div>
-        </section>
-        <section class="btns">
-          <span class="btns__btn btns__btn--big">
-            <i class="fas fa-play fa-xs"></i>
-            <span>Play</span>
-          </span>
-          <span class="btns__btn"><i class="fas fa-heart"></i></span>
-          <span class="btns__btn"><i class="fas fa-plus"></i></span>
-        </section>
-        <ul class="song-list">
-          <li class="song-list__song">
-            <div class="song-list__cover"></div>
-            <div class="song-list__data">
-              <h5>Corona Sucks</h5>
-              <h6>니꼬</h6>
+          <div class="today-book__title__text__check">
+            <div class="today-book__title__text__check__figure">
+              <i class="fas fa-bookmark fa-xs"></i>
             </div>
-          </li>
-          <li class="song-list__song">
-            <div class="song-list__cover"></div>
-            <div class="song-list__data">
-              <h5>Corona Sucks</h5>
-              <h6>니꼬</h6>
+            <div class="today-book__title__text__check__book">
+              <span>Book Now</span>
             </div>
-          </li>
-          <li class="song-list__song">
-            <div class="song-list__cover"></div>
-            <div class="song-list__data">
-              <h5>Corona Sucks</h5>
-              <h6>니꼬</h6>
-            </div>
-          </li>
-        </ul>
-      </main>
-    </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <h1 class="top-adventures__title">Top Adventures</h1>
+
+    <ul class="top">
+      <li class="top-list">
+        <div class="top-list__figure">
+          <img src="../img/아무사진.png" width="80px" height="120px" />
+        </div>
+        <div class="top-list__score">
+          <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i
+          ><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i
+          ><i class="far fa-star fa-xs"></i>
+        </div>
+      </li>
+      <li class="top-list">
+        <div class="top-list__figure">
+          <img src="../img/아무사진.png" width="80px" height="120px" />
+        </div>
+        <div class="top-list__score">
+          <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i
+          ><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i
+          ><i class="far fa-star fa-xs"></i>
+        </div>
+      </li>
+      <li class="top-list">
+        <div class="top-list__figure">
+          <img src="../img/아무사진.png" width="80px" height="120px" />
+        </div>
+        <div class="top-list__score">
+          <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i
+          ><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i
+          ><i class="far fa-star fa-xs"></i>
+        </div>
+      </li>
+      <li class="top-list">
+        <div class="top-list__figure">
+          <img src="../img/아무사진.png" width="80px" height="120px" />
+        </div>
+        <div class="top-list__score">
+          <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i
+          ><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i
+          ><i class="far fa-star fa-xs"></i>
+        </div>
+      </li>
+      <li class="top-list">
+        <div class="top-list__figure">
+          <img src="../img/아무사진.png" width="80px" height="120px" />
+        </div>
+        <div class="top-list__score">
+          <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i
+          ><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i
+          ><i class="far fa-star fa-xs"></i>
+        </div>
+      </li>
+    </ul>
+
+    <footer>
+      <h1>Popular authors</h1>
+      <div class="author">
+        <div class="author__figure">
+          <img src="../img/아무사진.png" width="100px" height="140px" />
+        </div>
+        <div class="author__name">
+          <h2 class="author__name__edit">George Raymond Richard Martin</h2>
+          <h4 class="the-end">
+            Modern American science fiction writer, screenwriter, producer and
+            editor, winner of many literary awards.
+          </h4>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
