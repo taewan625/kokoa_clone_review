@@ -1,4 +1,11 @@
 .status-bar {
+  /* postion: fixed || location: || width:100% */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* padding으로 인한 box 사이즈가 커짐을 막는  border-box */
+  box-sizing: border-box;
+
   display: flex;
   justify-content: center;
   padding: 5px 3px;

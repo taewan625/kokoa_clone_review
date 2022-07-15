@@ -1,0 +1,39 @@
+body {
+  height: 100vh;
+}
+.nav {
+  /* 아래로 고정하기 위함 */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  background-color: #f9f9fa;
+  padding: 15px 50px;
+  /* 완전 중요!!! */
+  box-sizing: border-box;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+.nav__link {
+  position: relative;
+  color: #2e363e;
+}
+
+.nav__notification {
+  background-color: tomato;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  font-size: small;
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+}

@@ -1,0 +1,42 @@
+.user-component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user-component__column {
+  display: flex;
+  align-items: center;
+}
+
+/* common avatar profile default value */
+.user-component__avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 30px;
+  margin-right: 20px;
+}
+.user-component__title {
+  font-weight: 600;
+  font-size: large;
+}
+.user-component__subtitle {
+  margin-top: 5px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* my avatar profile size */
+.user-component__avatar-others {
+  width: 60px;
+  height: 60px;
+  border-radius: 25px;
+}
+.user-component__title-others {
+  font-weight: 500;
+}
+
+.user-component__column:last-child {
+  color: rgba(0, 0, 0, 0.5);
+}
+.fa-chevron-right {
+  margin-left: 5px;
+}
