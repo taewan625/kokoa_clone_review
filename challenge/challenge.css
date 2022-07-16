@@ -1,158 +1,230 @@
 * {
   box-sizing: border-box;
 }
-header {
-  padding: 40px 0 50px 0;
-  height: 120px;
-  width: 100%;
-  background-color: rgb(255, 189, 17);
-}
-.status-bar {
+body {
   display: flex;
-  justify-content: center;
-  padding: 5px;
-}
-.status-bar__column {
-  width: 33%;
-}
-.status-bar__column:first-child {
-  margin-left: 15px;
-}
-.status-bar__column:nth-child(2) {
-  display: flex;
-  justify-content: center;
-  font-size: larger;
-  font-weight: 600;
-}
-.status-bar__column:last-child {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-right: 20px;
-}
-.status-bar__column:last-child .fa-battery-full {
-  margin: 0 5px 0 5px;
-}
-
-/* input */
-form {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  bottom: 30px;
-}
-input {
-  height: 60px;
-  width: 80%;
-  margin-bottom: 30px;
-  padding: 10px 0px 10px 30px;
-  border: none;
-  border-radius: 2em;
-  box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.2);
-}
-.fa-search {
-  position: relative;
-  top: 22px;
-  right: 50px;
-  opacity: 0.2;
+  justify-content: space-evenly;
 }
 main {
-  margin-left: 40px;
-}
-h1 {
-  font-size: larger;
-  font-weight: 800;
-  margin-bottom: 20px;
-}
-.today-book {
-  display: flex;
-}
-img {
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  /* 이걸 잘 모르겠네 */
+  height: 80%;
+  width: 30%;
   border-radius: 10px;
-  margin: 0px 20px 20px 0px;
+  box-shadow: 0 0 5px 3px whitesmoke;
+  margin-top: 50px;
+  padding: 0 15px 20px 15px;
 }
-.today-book__title {
-  width: 155px;
-}
-.today-book__title__text__title-edit {
-  font-size: larger;
-  font-weight: 500;
-  line-height: 1.6;
-}
-.today-book__title__text__edit {
-  font-size: 90%;
-  opacity: 0.4;
-  line-height: 1.8;
-}
-.today-book__title__text__type {
-  margin: 15px 0px 15px 0px;
+
+/* status bar */
+.status-bar {
   display: flex;
   justify-content: space-between;
-  font-size: small;
+  margin: 5px 0px;
+  padding: 20px 15px;
 }
-.today-book__title__text__type__box {
-  height: 20px;
-  width: 70px;
-  background-color: #efeff6;
+
+/* now-playlist  */
+.now-playlist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding-top: 2px;
-  border-radius: 5px;
+  /* 👆내가 원하는 center의 기준이 .now-playlist이기 때문에 
+  .now-playlist__detail에 넣지 않는다 text-align 넣지 않는다.
+  넣어봤자 소용없기도 하고 */
+  margin: 10px 0;
 }
-.today-book__title__text__check {
+.circle {
+  border-radius: 40px;
+  margin-bottom: 20px;
+}
+.big-square {
+  border-radius: 10px;
+}
+.now-playlist > img {
+  box-shadow: 2px 2px 10px -2px grey;
+}
+
+.now-playlist__detail {
+  margin-bottom: 30px;
+}
+
+.now_playlist__detail-lg {
+  font-size: x-large;
+  font-weight: 600;
+  line-height: 1.8;
+}
+.now_playlist__detail-sm {
+  font-size: large;
+  font-weight: 600;
+  opacity: 0.5;
+}
+
+/* menu bar */
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+  align-items: center;
+}
+.menu__shuffle {
+  background-color: black;
+  color: whitesmoke;
+  font-size: small;
+  padding: 10px 25px;
+  border-radius: 1.5em;
+}
+.menu__like {
+  background-color: whitesmoke;
+  font-size: small;
+  padding: 10px 25px;
+  border-radius: 1.5em;
+}
+
+/* list */
+ul {
+  list-style: none;
+  padding: 0px 10px;
+}
+.list {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 15px;
+  border-radius: 1.5em;
+  padding: 8px 20px;
 }
-.today-book__title__text__check__figure {
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
-  background-color: rgb(255, 189, 17);
-  position: relative;
+.list__column {
+  display: flex;
 }
-.fa-bookmark {
-  position: relative;
-  left: 8px;
-  top: 2px;
+.list__column > img {
+  margin-right: 10px;
+  border-radius: 7px;
 }
-.today-book__title__text__check__book {
-  height: 25px;
-  width: 80px;
+.list__column-detail__name {
+  line-height: 1.6;
   font-size: small;
+  font-weight: 600;
+  opacity: 0.5;
+}
+.list__column-detail__title {
+  font-weight: 600;
+}
+li > i {
+  opacity: 0.5;
+}
+.list-shadow {
+  border-radius: 1.5em;
+  box-shadow: 0 2px 5px 1px whitesmoke;
+}
+.list__column-playing {
+  position: relative;
+}
+.fa-spinner {
+  height: 50px;
+  width: 50px;
+  background-color: gray;
   color: whitesmoke;
-  background-color: black;
-  text-align: center;
-  padding-top: 5px;
-  border-radius: 5px;
-}
-.top-adventures__title {
-  margin: 20px 0 20px 40px;
-}
-ul {
-  margin: 0 0 20px 40px;
   display: flex;
-  overflow-x: auto;
-}
-li {
-  margin-right: 20px;
-}
-footer {
-  margin: 50px 0 0 40px;
-}
-.author {
-  display: flex;
-}
-.author__name {
-  width: 220px;
-}
-.the-end {
-  font-size: 90%;
+  align-items: center;
+  justify-content: center;
   opacity: 0.4;
-  line-height: 1.4;
+  border-radius: 7px;
+  position: absolute;
 }
-.author__name__edit {
-  font-size: larger;
-  font-weight: 500;
-  line-height: 1.4;
+
+/*play*/
+.play-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  border-radius: 3em;
+  padding: 7px 20px;
+}
+.play-status__detail {
+  text-align: center;
+  padding-left: 10px;
+  font-size: x-small;
+}
+.play-status__detail-name {
+  line-height: 1.6;
+  color: gray;
+  font-size: small;
+  font-weight: 600;
+}
+.play-status__detail-title {
+  font-weight: 600;
+  color: whitesmoke;
+}
+.play-status__detail-botton {
+  color: whitesmoke;
+  margin-right: 5px;
+}
+.fa-grip-lines-vertical {
+  margin-left: 3px;
+}
+.play-status__detail-botton > .fa-angle-right {
+  margin-left: 3px;
+}
+/* second main */
+/* playlist */
+.now-playlist__margin {
+  margin: 45px 0 30px 0;
+}
+.detail-lg {
+  font-size: xx-large;
+}
+.detail-sm {
+  font-size: small;
+}
+.big-square {
+  margin-bottom: 50px;
+}
+
+input[type="range"] {
+  accent-color: black;
+  height: 5px;
+  width: 100%;
+}
+.play-time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.play-time__time {
+  position: relative;
+  bottom: 5px;
+  color: gray;
+  font-size: x-small;
+}
+.play-time > input {
+  margin-bottom: 60px;
+}
+
+.play-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 70px;
+  padding: 0 15px;
+  color: gray;
+}
+.play-button__main {
+  width: 33%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+}
+.fa-play {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: black;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

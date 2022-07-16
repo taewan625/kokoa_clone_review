@@ -14,124 +14,139 @@
     />
     <link rel="stylesheet" href="challenge.css" />
   </head>
-
   <body>
-    <header>
+    <!-- first page -->
+    <main class="page">
+      <!-- div로 묶어야 되는지 절 모르겠음 -->
+      <!-- status bar -->
       <div class="status-bar">
-        <div class="status-bar__column">
-          <i class="fas fa-bars fa-lg"></i>
-        </div>
-        <div class="status-bar__column">library</div>
-        <div class="status-bar__column">
-          <i class="fas fa-shopping-bag fa-lg"></i>
+        <i class="fas fa-arrow-left"></i>
+        <i class="fas fa-search"></i>
+      </div>
+
+      <!-- now-playlist  -->
+      <div class="now-playlist">
+        <img class="circle" src="img/24Kgoldn.png" height="80px" width="80px" />
+        <div class="now-playlist__detail">
+          <h1 class="now_playlist__detail-lg">24Kgoldn</h1>
+          <span class="now_playlist__detail-sm">hip-hop</span>
         </div>
       </div>
-    </header>
 
-    <form>
-      <input type="text" placeholder="Search books...." />
-      <i class="fas fa-search"></i>
-    </form>
-
-    <main>
-      <h1>Book of the day</h1>
-      <div class="today-book">
-        <div class="today-book__figure">
-          <img src="../img/아무사진.png" width="100px" height="140px" />
+      <!-- menu -->
+      <div class="menu">
+        <span class="menu__shuffle"> Shuffle</span>
+        <div class="menu__like">
+          <i class="fas fa-heart fa-sm"></i>
+          <span class="menu__like-count"> 100,000</span>
         </div>
-        <div class="today-book__title">
-          <div class="today-book__title__text">
-            <h2 class="today-book__title__text__title-edit">A hagi shiltha</h2>
-            <h4 class="today-book__title__text__edit">Journey Through</h4>
-            <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i
-            ><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i
-            ><i class="far fa-star fa-xs"></i>
-          </div>
-          <div class="today-book__title__text__type">
-            <div class="today-book__title__text__type__box">Journey</div>
-            <div class="today-book__title__text__type__box">Biography</div>
-          </div>
-          <div class="today-book__title__text__check">
-            <div class="today-book__title__text__check__figure">
-              <i class="fas fa-bookmark fa-xs"></i>
-            </div>
-            <div class="today-book__title__text__check__book">
-              <span>Book Now</span>
+      </div>
+
+      <!-- list -->
+      <ul>
+        <li class="list">
+          <div class="list__column">
+            <img src="img/eminem.png" height="50px" width="50px" />
+            <div class="list__column-detail">
+              <span class="list__column-detail__name">eminem</span>
+              <h5 class="list__column-detail__title">monster</h5>
             </div>
           </div>
+          <i class="fas fa-ellipsis-v"></i>
+        </li>
+        <!-- shadow -->
+        <li class="list list-shadow">
+          <div class="list__column list__column-playing">
+            <i class="fas fa-spinner fa-lg"></i>
+            <img src="img/24Kgoldn.png" height="50px" width="50px" />
+            <div class="list__column-detail">
+              <span class="list__column-detail__name">24Kgoldn</span>
+              <h5 class="list__column-detail__title">mood</h5>
+            </div>
+          </div>
+          <i class="fas fa-ellipsis-v"></i>
+        </li>
+
+        <li class="list">
+          <div class="list__column">
+            <img src="img/cash cash.png" height="50px" width="50px" />
+            <div class="list__column-detail">
+              <span class="list__column-detail__name">Cash Cash</span>
+              <h5 class="list__column-detail__title">How to love</h5>
+            </div>
+          </div>
+          <i class="fas fa-ellipsis-v"></i>
+        </li>
+
+        <li class="list">
+          <div class="list__column">
+            <img src="img/The reklaws.png" height="50px" width="50px" />
+            <div class="list__column-detail">
+              <span class="list__column-detail__name">The reklaws</span>
+              <h5 class="list__column-detail__title">I do too</h5>
+            </div>
+          </div>
+          <i class="fas fa-ellipsis-v"></i>
+        </li>
+      </ul>
+
+      <!-- play-status -->
+      <div class="play-status">
+        <div class="play-status__detail">
+          <span class="play-status__detail-name">24Kgoldn</span>
+          <h5 class="play-status__detail-title">mood</h5>
+        </div>
+        <div class="play-status__detail-botton">
+          <i class="fas fa-angle-left fa-lg"></i>
+          <i class="fas fa-grip-lines-vertical fa-lg"></i>
+          <i class="fas fa-angle-right fa-lg"></i>
         </div>
       </div>
     </main>
 
-    <h1 class="top-adventures__title">Top Adventures</h1>
+    <!-- 50% -->
 
-    <ul class="top">
-      <li class="top-list">
-        <div class="top-list__figure">
-          <img src="../img/아무사진.png" width="80px" height="120px" />
-        </div>
-        <div class="top-list__score">
-          <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i
-          ><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i
-          ><i class="far fa-star fa-xs"></i>
-        </div>
-      </li>
-      <li class="top-list">
-        <div class="top-list__figure">
-          <img src="../img/아무사진.png" width="80px" height="120px" />
-        </div>
-        <div class="top-list__score">
-          <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i
-          ><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i
-          ><i class="far fa-star fa-xs"></i>
-        </div>
-      </li>
-      <li class="top-list">
-        <div class="top-list__figure">
-          <img src="../img/아무사진.png" width="80px" height="120px" />
-        </div>
-        <div class="top-list__score">
-          <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i
-          ><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i
-          ><i class="far fa-star fa-xs"></i>
-        </div>
-      </li>
-      <li class="top-list">
-        <div class="top-list__figure">
-          <img src="../img/아무사진.png" width="80px" height="120px" />
-        </div>
-        <div class="top-list__score">
-          <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i
-          ><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i
-          ><i class="far fa-star fa-xs"></i>
-        </div>
-      </li>
-      <li class="top-list">
-        <div class="top-list__figure">
-          <img src="../img/아무사진.png" width="80px" height="120px" />
-        </div>
-        <div class="top-list__score">
-          <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i
-          ><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i
-          ><i class="far fa-star fa-xs"></i>
-        </div>
-      </li>
-    </ul>
+    <!-- second page -->
+    <main class="page">
+      <!-- status-bar -->
+      <div class="status-bar">
+        <i class="fas fa-arrow-left"></i>
+        <i class="fas fa-ellipsis-v"></i>
+      </div>
 
-    <footer>
-      <h1>Popular authors</h1>
-      <div class="author">
-        <div class="author__figure">
-          <img src="../img/아무사진.png" width="100px" height="140px" />
-        </div>
-        <div class="author__name">
-          <h2 class="author__name__edit">George Raymond Richard Martin</h2>
-          <h4 class="the-end">
-            Modern American science fiction writer, screenwriter, producer and
-            editor, winner of many literary awards.
-          </h4>
+      <!-- now-playlist  -->
+      <div class="now-playlist now-playlist__margin">
+        <img
+          class="big-square"
+          src="img/24Kgoldn.png"
+          height="230px"
+          width="230px"
+        />
+        <div class="now-playlist__detail">
+          <h1 class="now_playlist__detail-lg detail-lg">mood</h1>
+          <span class="now_playlist__detail-sm detail-sm">24Kgoldn</span>
         </div>
       </div>
-    </footer>
+
+      <!-- play time -->
+      <div class="play-time">
+        <span class="play-time__time">1:56</span>
+        <span class="play-time__time">2:21</span>
+      </div>
+      <div class="play-time">
+        <input type="range" />
+      </div>
+
+      <!-- play button -->
+      <div class="play-button">
+        <i class="fas fa-redo fa-sm"></i>
+        <div class="play-button__main">
+          <i class="fas fa-angle-left fa-2x"></i>
+          <i class="fas fa-play"></i>
+          <i class="fas fa-angle-right fa-2x"></i>
+        </div>
+        <i class="fas fa-random fa-sm"></i>
+      </div>
+    </main>
   </body>
 </html>
