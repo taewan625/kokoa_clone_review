@@ -6,6 +6,7 @@
 .user-component__column:first-child {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 /* common avatar profile default value */
@@ -19,11 +20,25 @@
   font-weight: 600;
   font-size: large;
 }
+.user-component__detail {
+  display: flex;
+  align-items: center;
+}
 .user-component__subtitle {
   margin-top: 5px;
   color: rgba(0, 0, 0, 0.7);
 }
-
+.user-component__text span {
+  margin: 5px 0 0 3px;
+  color: red;
+  font-size: small;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+}
 /* my avatar profile size */
 .user-component__avatar-others {
   width: 60px;

@@ -28,3 +28,9 @@ body {
   bottom: 12px;
   left: 12px;
 }
+
+.nav__red-dot {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}

@@ -15,3 +15,11 @@
 .screen-header__icons span {
   margin-left: 20px;
 }
+.a__red-dot {
+  position: relative;
+}
+.header__red-dot {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}

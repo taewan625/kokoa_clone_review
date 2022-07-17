@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More screen</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+
+      <div class="status-bar__column">18:43</div>
+      <div class="status-bar__column">
+        <span>111%</span>
+        <i class="fas fa-battery-full"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="screen-header">
+      <h1 class="screen-header__title">More</h1>
+      <div class="screen-header__icons">
+        <span>
+          <i class="fas fa-search-plus fa-lg"></i>
+        </span>
+        <span>
+          <i class="fas fa-music fa-lg"></i>
+        </span>
+        <span>
+          <a class="a__red-dot" href="settings.html">
+            <div class="red-dot header__red-dot"></div>
+            <i class="fas fa-cog fa-lg"></i>
+          </a>
+        </span>
+      </div>
+    </header>
+
+    <main class="main-screen more-screen">
+      <div class="user-component">
+        <div class="user-component__column">
+          <img
+            src="img/아무사진.png"
+            class="user-component__avatar user-component__avatar--myprofile"
+          />
+          <div class="user-component__text">
+            <h4 class="user-component__title">taewan</h4>
+            <div class="user-component__detail">
+              <h6 class="user-component__subtitle">+82.10-1234-5678</h6>
+              <span>!</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="user-component__column">
+          <i class="far fa-sticky-note fa-2x"></i>
+        </div>
+      </div>
+
+      <div class="icon-raw">
+        <div class="icon-raw__icon">
+          <i class="far fa-calendar"></i><span>Calender</span>
+        </div>
+        <div class="icon-raw__icon">
+          <i class="far fa-meh-blank"></i><span>emoticon</span>
+        </div>
+        <div class="icon-raw__icon">
+          <i class="fas fa-qrcode"></i><span>QR Code</span>
+        </div>
+        <div class="icon-raw__icon">
+          <i class="far fa-address-book"></i><span>Add by Contacts</span>
+        </div>
+        <div class="icon-raw__icon">
+          <i class="fas fa-fingerprint"></i><span>Add by ID</span>
+        </div>
+        <div class="icon-raw__icon">
+          <i class="far fa-envelope"></i><span>Invite</span>
+        </div>
+      </div>
+      <div class="more-suggestions">
+        <h4 class="more-suggestions__title">Suggestions</h4>
+        <div class="more-suggestions__icons">
+          <div class="more_suggestions__icon">
+            <div class="more-suggestions__icon-image">
+              <i class="fas fa-quote-right fa-lg"></i>
+            </div>
+            <span class="more-suggestions__icon-text">kokoa story</span>
+          </div>
+
+          <div class="more_suggestions__icon">
+            <div class="more-suggestions__icon-image">
+              <i class="fas fa-dog fa-lg"></i>
+            </div>
+            <span class="more-suggestions__icon-text">kokoa friends</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__link" href="friends.html">
+            <i class="far fa-user fa-lg"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="chats.html">
+            <span class="nav__notification badge">1</span>
+            <i class="far fa-comment fa-lg"> </i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="find.html">
+            <i class="fas fa-search-plus fa-lg"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="more.html">
+            <div class="red-dot nav__red-dot"></div>
+            <i class="fas fa-ellipsis-h fa-lg"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
