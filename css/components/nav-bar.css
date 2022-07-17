@@ -24,15 +24,6 @@ body {
 }
 
 .nav__notification {
-  background-color: tomato;
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: whitesmoke;
-  font-size: small;
   position: absolute;
   bottom: 12px;
   left: 12px;

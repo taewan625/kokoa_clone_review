@@ -10,6 +10,7 @@
 @import "components/nav-bar.css";
 @import "components/screen-header.css";
 @import "components/user-component.css";
+@import "components/badge.css";
 
 /* screens */
 @import "screens/login.css";
@@ -19,4 +20,7 @@
 body {
   font-family: "Edu SA Beginner", cursive;
   height: 200vh;
+}
+.main-screen {
+  padding: var(--horizontal-space);
 }

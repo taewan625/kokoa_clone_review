@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
 }
-.user-component__column {
+.user-component__column:first-child {
   display: flex;
   align-items: center;
 }
@@ -36,7 +36,15 @@
 
 .user-component__column:last-child {
   color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 .fa-chevron-right {
   margin-left: 5px;
+}
+
+.user-component__time {
+  display: block;
+  margin-bottom: 5px;
 }
