@@ -2,4 +2,5 @@
   --yellow: #fae100;
   --horizontal-space: 20px 20px;
   /* padding 좌우로 20px 고정하고 싶은 것 */
+  --main-border: 1px solid rgba(0, 0, 0, 0.2);
 }
