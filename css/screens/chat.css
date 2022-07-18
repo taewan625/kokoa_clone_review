@@ -1,0 +1,139 @@
+#chat-screen {
+  background-color: dimgray;
+}
+
+#chat-screen .alt-header {
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  top: 10px;
+  background-color: dimgray;
+  z-index: 1; /* 안넣으면 몇몇개는 또 보임 */
+}
+#chat-screen .status-bar {
+  background-color: dimgray;
+  z-index: 2;
+  /* 숫자가 클수록 위로 올라감 layer위치 나타낸 거임 시작은 0부터*/
+}
+.main-chat {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chat__timestamp {
+  color: white;
+  background-color: rgba(176, 173, 173, 0.4);
+  padding: 8px 15px;
+  border-radius: 25px;
+  margin-bottom: 25px;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+}
+.message-row img {
+  width: 40px;
+  height: 40px;
+  border-radius: 25%;
+  margin: 0 15px 30px 0;
+}
+.message__author {
+  opacity: 0.8;
+  font-size: 15px;
+  display: block;
+  margin-bottom: 7px;
+}
+.message__bubble {
+  background-color: white;
+  padding: 8px;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  margin-right: 5px;
+}
+.message_info {
+  display: flex;
+  align-items: flex-end;
+}
+.message__time {
+  opacity: 0.8;
+  font-size: 12px;
+}
+
+.message-row--own {
+  justify-content: flex-end;
+}
+.message-row--own .message__bubble {
+  background-color: var(--yellow);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 10px;
+  margin: 0 0 0 5px;
+}
+
+/* 위치 바꾸는 방법 */
+/* display flex 적용된 children에게는 order이 적용된다 */
+/* .message-row--own .message__bubble {
+  order: 1;
+}
+.message-row--own .message__time {
+  order: 0;
+} */
+.message-row--own .message_info {
+  flex-direction: row-reverse;
+}
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 5px 25px;
+  align-items: center;
+}
+.reply .reply__column:first-child {
+  width: 10%;
+}
+.reply .reply__column:last-child {
+  width: 90%;
+  position: relative;
+}
+
+.reply i {
+  opacity: 0.5;
+}
+
+.reply input {
+  padding: 10px;
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 20px;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right: 0;
+  top: 2px;
+}
+.reply__column:last-child > i {
+  right: 40px;
+  top: 10px;
+}
+.reply__column button {
+  background-color: var(--yellow);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.reply__column button i {
+  opacity: 1;
+}
+.reply__column button:focus,
+.reply__column button:active {
+  outline: none;
+}

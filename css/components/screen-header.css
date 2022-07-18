@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 40px 20px var(--horizontal-space);
+  /* 상태바 밑에 고정시키기 위함  */
   opacity: 90%;
   margin-bottom: 15px;
 }
