@@ -29,3 +29,29 @@
 .friends-screen__channel-header > span {
   color: rgba(0, 0, 0, 0.6);
 }
+
+#splash-screen {
+  background-color: var(--yellow);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 132px;
+  animation: hide-splash-screen 0.4s ease-in-out forwards;
+  /* forwoards: animation 마지막을 유지 */
+  animation-delay: 1s;
+}
+
+@keyframes hide-splash-screen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    /* mouse에 걸리지 않고 빠져나오는 것 */
+  }
+}

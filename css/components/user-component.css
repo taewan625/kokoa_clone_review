@@ -3,6 +3,10 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.user-component__frined {
+  margin-bottom: 20px;
+}
 .user-component__column:first-child {
   display: flex;
   align-items: center;

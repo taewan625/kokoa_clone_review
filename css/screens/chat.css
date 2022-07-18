@@ -1,5 +1,6 @@
 #chat-screen {
   background-color: dimgray;
+  height: 200vh;
 }
 
 #chat-screen .alt-header {
@@ -15,11 +16,23 @@
   z-index: 2;
   /* 숫자가 클수록 위로 올라감 layer위치 나타낸 거임 시작은 0부터*/
 }
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .main-chat {
-  margin-top: 100px;
+  margin-top: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fadeIn 2s linear;
 }
 .chat__timestamp {
   color: white;
@@ -29,9 +42,21 @@
   margin-bottom: 25px;
 }
 
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .message-row {
   width: 100%;
   display: flex;
+  animation: fadeInLeft 2s linear;
+  will-change: transform;
 }
 .message-row img {
   width: 40px;
@@ -61,8 +86,20 @@
   font-size: 12px;
 }
 
+@keyframes fadeInRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .message-row--own {
   justify-content: flex-end;
+  animation: fadeInRight 2s linear;
+  will-change: transform;
 }
 .message-row--own .message__bubble {
   background-color: var(--yellow);
@@ -93,6 +130,7 @@
   box-sizing: border-box;
   padding: 5px 25px;
   align-items: center;
+  transition: transform 0.3s ease-in-out;
 }
 .reply .reply__column:first-child {
   width: 10%;
@@ -111,6 +149,8 @@
   width: 100%;
   border: var(--main-border);
   border-radius: 20px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
 }
 
 .reply__column:last-child > i,
@@ -120,7 +160,7 @@
   top: 2px;
 }
 .reply__column:last-child > i {
-  right: 40px;
+  right: 50px;
   top: 10px;
 }
 .reply__column button {
@@ -129,6 +169,7 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  margin-right: 10px;
 }
 .reply__column button i {
   opacity: 1;
@@ -136,4 +177,27 @@
 .reply__column button:focus,
 .reply__column button:active {
   outline: none;
+}
+
+/* focus-within; reply 내부에 어떤 element가 focus 되어 있을때 */
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile,
+.reply:focus-within button {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-smile,
+.reply button {
+  transition: opacity 0.3s ease-in-out;
+  /* .reply input{}  에 transition all이 적용되지 않으면 작동 안함*/
+}
+
+.reply input:focus {
+  width: 95vw;
+  transform: translateX(-11.5%) translateY(-80px);
+}
+.reply:focus-within {
+  transform: translateY(80px);
 }
